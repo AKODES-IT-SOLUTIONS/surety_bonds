@@ -1,0 +1,77 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <!-- <ion-row>
+      <ion-col style="padding-left:5%;padding-top: 4%" size="2">
+        <ion-menu-toggle>
+          <ion-buttons >
+            <img src="assets/imgs/menubtn.svg" style="width: 24px;
+              height: 24px;margin-top: 3px;">
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+
+      <ion-col class="titleclass" size="5" style="padding-top: 4%">
+        <div style="display: flex;">
+          <img src="assets/imgs/linkedin.svg" style="padding-left: 8%;">
+          <img src="assets/imgs/twitter.svg" style="padding-left: 8%;">
+            <img src="assets/imgs/fb.svg" style="padding-left: 8%;">
+        </div>
+      </ion-col>
+
+      <ion-col size="5" class="endbtn">
+        <ion-button class="btn1" (click)="open()">Get a Quote</ion-button>
+      </ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col style="padding-top:10px;padding-left: 20px;" size="2">
+        <ion-menu-toggle>
+          <ion-buttons>
+            <img src="assets/imgs/menubtn.svg" style="width: 24px;
+              height: 24px;margin-top: 3px;">
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+
+      <ion-col class="titleclass" size="8">
+        <ion-text class="ctitle">Home</ion-text>
+      </ion-col>
+
+      <ion-col size="2" style="padding-top:8px;padding-left:20px;">
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <img src="assets/imgs/banner.jpeg" class="cimg">
+  <!-- <ion-slides class="slides" pager="true" [options]="slideOpts">
+    <ion-slide class="bannerSlide">
+      <img src="assets/imgs/banner.jpeg" class="cimg">
+    </ion-slide>
+    <ion-slide class="bannerSlide">
+      <img src="assets/imgs/banner.jpeg" class="cimg">
+    </ion-slide>
+  </ion-slides> -->
+
+  <div class="wrapper">
+
+    <div class="para">SPECIALISTS SURETY BROKER SUPPLYING BONDS GUARANTEES AND WARRANTIES.</div>
+
+    <p style="font-size: 16px;
+      color: #4C5359;
+      text-align: center;">OUR PRODUCT RANGE INCLUDES ALL SURETY BONDS, STRUCTURAL WARRANTIES,
+      INSURANCE BACKED GUARANTEES,
+      JCT & NEC CONTRACT SPECIFIC INSURANCES AND LEGAL INDEMNITIES.</p>
+
+
+    <div class="btndiv">
+      <ion-button class="btn" (click)="goto()">More Info</ion-button>
+    </div>
+    <div class="btndiv">
+      <ion-button class="btn1" (click)="openform()">Start Your Quote</ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

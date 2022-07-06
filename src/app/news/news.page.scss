@@ -1,0 +1,86 @@
+.ctitle{
+	// text-align: center;
+  font-size: 29px;
+  color: #4C5359;
+  font-weight: bold;
+  font-family: Cinzel, serif !important;
+}
+.titleclass{
+	text-align: center;
+  padding-top: 7px;
+}
+.ios{
+	.titleclass{
+		text-align: center; padding-top: 8px;
+	}
+}
+.endbtn {
+  padding-top: 2%
+}
+.main{
+    position: relative;
+    margin-bottom: 30px;
+    // background-color: #E6E8EA;
+    margin-top:5%;
+}
+.imgdiv img{
+    width: 100%;
+    height: 200px;
+}
+.textdiv{
+    padding: 8px 15px 5px 15px;
+}
+.para{
+    cursor: default;
+    font-size: 1.15em;
+    line-height: 1.3em;
+    color: #4C5359;
+    font-family: Cinzel,serif !important;
+    margin: 0px;
+}
+h2{
+    color: #4C5359;
+    font-weight: normal;
+    font-size: 1.7em;
+    line-height: 1.25em;
+    font-family: Cinzel,serif !important;
+}
+.btndiv{
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .btn {
+    --background: #4C5359;
+    --box-shadow: none;
+    font-family: Cinzel, serif !important;
+    color: #fff;
+    font-size: 20px;
+    --border-radius: 30px;
+    font-weight:bold;
+    height: 42px;
+    width: 206px;
+    text-transform: uppercase;
+  }
+  .btn1{
+    --background: #4C5359;
+    --box-shadow: none;
+    font-family: Cinzel, serif !important;
+    color: #fff;
+    font-size: 20px;
+    --border-radius: 30px;
+    font-weight:bold;
+    height: 42px;
+    text-transform: uppercase;
+  }
+// .btndiv{
+//     text-align: end;
+// }
+// .btn1{
+//     --background:transparent !important;
+//     --box-shadow: none;
+//     --color: #4C5359!important;
+//     --border-radius: 50px;
+// }
+.cicon{
+    font-size: 25px;
+}

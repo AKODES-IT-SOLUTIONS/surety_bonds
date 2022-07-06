@@ -1,0 +1,98 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <!-- <ion-list id="inbox-list">
+          <ion-list-header>Inbox</ion-list-header>
+          <ion-note>hi@ionicframework.com</ion-note> -->
+        <div style="text-align: center;" (click)="gotohome()">
+          <div class="imgdiv">
+            <img src="assets/imgs/logo.svg">
+          </div>
+        </div>
+        <div auto-hide="false" *ngFor="let p of appPages; let i = index">
+          <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+            routerLinkActive="selected">
+            <img class="sidemenu-icons" src="{{p.img}}">
+            <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
+            <div style="display: flex;width: 100%;">
+              <ion-label class="title" [class.ativeindex]="p.title==activepage" (click)="openpage(p)">{{ p.title }}
+              </ion-label>
+              <div *ngIf="!show" style="margin-top: 4%;">
+                <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-down-outline"
+                  (click)="showhide()"></ion-icon>
+              </div>
+              <div *ngIf="show" style="margin-top: 4%;">
+                <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-up-outline" (click)="showhide()">
+                </ion-icon>
+              </div>
+
+              <!-- strutrula watanties -->
+              <div *ngIf="!show1" style="margin-top: 4%;">
+                <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties' " name="caret-down-outline"
+                  (click)="showhide1()"></ion-icon>
+              </div>
+              <div *ngIf="show1" style="margin-top: 4%;">
+                <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-up-outline"
+                  (click)="showhide1()">
+                </ion-icon>
+              </div>
+              <!-- strutrula watanties -->
+
+            </div>
+
+          </ion-item>
+        </div>
+
+        <div class="extra" *ngIf="show==true">
+          <div auto-hide="false" *ngFor="let p of appsubPages; let i = index" (click)="openpage(p)">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <img class="sidemenu-icons" src="{{p.img}}">
+
+              <div style="display: flex;width: 100%;">
+                <ion-label class="title" [class.ativeindex]="p.title==activepage">{{ p.title }}</ion-label>
+                <div *ngIf="!show" style="margin-top: 4%;" (click)="showhide()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-down-outline"
+                    ></ion-icon>
+                </div>
+                <div *ngIf="show" style="margin-top: 4%;"  (click)="showhide()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-up-outline"
+                   ></ion-icon>
+                </div>
+
+              </div>
+
+            </ion-item>
+          </div>
+        </div>
+        <!-- strutrula watanties -->
+        <div class="extra1" *ngIf="show1==true">
+          <div auto-hide="false" *ngFor="let p of appsubPages1; let i = index" (click)="openpage(p)">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <img class="sidemenu-icons" src="{{p.img}}">
+
+              <div style="display: flex;width: 100%;">
+                <ion-label class="title" [class.ativeindex]="p.title==activepage">{{ p.title }}</ion-label>
+                <div *ngIf="!show1" style="margin-top: 4%;" (click)="showhide1()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-down-outline"
+                    ></ion-icon>
+                </div>
+                <div *ngIf="show1" style="margin-top: 4%;" (click)="showhide1()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-up-outline"
+                    ></ion-icon>
+                </div>
+
+              </div>
+
+            </ion-item>
+          </div>
+        </div>
+        <!-- strutrula watanties -->
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

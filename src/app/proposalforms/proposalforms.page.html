@@ -1,0 +1,47 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+
+    <ion-row>
+      <ion-col style="padding-top:10px;padding-left: 20px;" size="2">
+        <ion-menu-toggle>
+          <ion-buttons>
+            <img src="assets/imgs/menubtn.svg" style="width: 24px;
+              height: 24px;margin-top: 3px;">
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+
+      <ion-col class="titleclass" size="8.5">
+        <ion-text class="ctitle">PROPOSAL FORMS</ion-text>
+      </ion-col>
+
+      <ion-col size="1.5" style="padding-top:8px;padding-left:20px;">
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="wrapper">
+    <h3>Below are the most common Proposal Forms, if you can not find what you need then please ask.</h3>
+
+    <ion-button class="clrbtn1">
+      <a class="coloured-button"
+        href="https://drive.google.com/file/d/1_Nzd61K-L3aCg_3IniFhYreipBhSpIAI/view?usp=sharing"
+        target="_blank">Performance Bond</a>
+    </ion-button>
+    <p style="text-align: left;font-size: 1em;color: #4d545a">If you can arrange for the form to
+      be completed and returned along with:
+    </p>
+
+    <div class="btndiv">
+      <ion-button class="btn" (click)="goto()">More Info</ion-button>
+    </div>
+    <div class="btndiv">
+      <ion-button class="btn1" (click)="openform()">Start Your Quote</ion-button>
+    </div>
+
+  </div>
+</ion-content>
