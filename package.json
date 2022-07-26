@@ -101,9 +101,9 @@
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-ionic-webview": {},
       "cordova-plugin-wkwebviewxhrfix": {},
-      "cordova-plugin-wkwebview-engine": {}
+      "cordova-plugin-wkwebview-engine": {},
+      "cordova-plugin-ionic-webview": {}
     },
     "platforms": [
       "ios",
