@@ -28,7 +28,7 @@
         if ([stringToLoad hasPrefix:@"/_app_file_"]) {
             startPath = [stringToLoad stringByReplacingOccurrencesOfString:@"/_app_file_" withString:@""];
         } else {
-            startPath = self.basePath ? self.basePath : @"";
+            startPath = self.basePath;
             if ([stringToLoad isEqualToString:@""] || [url.pathExtension isEqualToString:@""]) {
                 startPath = [startPath stringByAppendingString:@"/index.html"];
             } else {
