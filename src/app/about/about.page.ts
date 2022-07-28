@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-
+declare var cordova: any;
 @Component({
   selector: 'app-about',
   templateUrl: './about.page.html',
@@ -20,12 +20,13 @@ export class AboutPage implements OnInit {
   goto() {
     console.log('url getting======')
     var options = "location=no,hidden=yes,toolbar=no,hidespinner=yes";
-    let browser = this.iab.create('https://suretybondsandguarantees.co.uk/about/default.aspx', '_system', options);
-    browser.show();
+    // let browser = this.iab.create('https://suretybondsandguarantees.co.uk/about/default.aspx', '_system', options);
+    // browser.show();
+    cordova.InAppBrowser.open('https://suretybondsandguarantees.co.uk/about/default.aspx', '_system', options)
   }
   openform() {
     var options = "location=no,hidden=yes,toolbar=no,hidespinner=yes";
-    this.iab.create('https://share.hsforms.com/13kYlFwtkQc68KgxCTucqFg5n81m', '_system', options);
+    this.iab.create('https://share.hsforms.com/13kYlFwtkQc68KgxCTucqFg5n81m', '_blank', options);
 
   }
   readmore() {

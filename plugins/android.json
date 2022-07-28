@@ -35,7 +35,6 @@
       "PACKAGE_NAME": "com.suretybondsandguarantees.app"
     },
     "cordova-plugin-ionic-webview": {
-      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
       "PACKAGE_NAME": "com.suretybondsandguarantees.app"
     }
   },
