@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
 declare var cordova: any;
 @Component({
   selector: 'app-about',
@@ -26,7 +26,7 @@ export class AboutPage implements OnInit {
   }
   openform() {
     var options = "location=no,hidden=yes,toolbar=no,hidespinner=yes";
-    this.iab.create('https://share.hsforms.com/13kYlFwtkQc68KgxCTucqFg5n81m', '_blank', options);
+    this.iab.create('https://share.hsforms.com/13kYlFwtkQc68KgxCTucqFg5n81m', '_system', options);
 
   }
   readmore() {
