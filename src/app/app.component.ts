@@ -14,11 +14,11 @@ export class AppComponent {
   appsubPages = []
   appsubPages1 = [];
   public appPages = [
-    { title: 'Home', url: '/home', img: '/assets/imgs/icons/home.svg' },
-    { title: 'About', url: '/about', img: '/assets/imgs/icons/about.svg' },
-    { title: 'Surety Bonds', url: '/suretybonds', img: '/assets/imgs/icons/noun-contract.svg' },
-    { title: 'Insurance Backed Guarantees', url: '/insurancebackedgurantee', img: '/assets/imgs/icons/insurance.svg' },
-    { title: 'Structural Warranties', url: '/structuralwarranties', img: '/assets/imgs/icons/noun-certified.svg' },
+    // { title: 'Home', url: '/home', img: '/assets/imgs/icons/home.svg' },
+    // { title: 'About', url: '/about', img: '/assets/imgs/icons/about.svg' },
+    // { title: 'Surety Bonds', url: '/suretybonds', img: '/assets/imgs/icons/noun-contract.svg' },
+    // { title: 'Insurance Backed Guarantees', url: '/insurancebackedgurantee', img: '/assets/imgs/icons/insurance.svg' },
+    // { title: 'Structural Warranties', url: '/structuralwarranties', img: '/assets/imgs/icons/noun-certified.svg' },
     { title: 'JCT Covers', url: '/jctcovers', img: '/assets/imgs/icons/building.svg' },
     { title: 'News', url: '/news', img: '/assets/imgs/icons/news.svg' },
     { title: 'Proposal Forms', url: '/proposalforms', img: '/assets/imgs/icons/tasksquare.svg' },
@@ -32,7 +32,7 @@ export class AppComponent {
     // { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
     // { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
-
+  url: string;
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor(public navCtrl: NavController,
     public router: Router,
@@ -44,13 +44,41 @@ export class AppComponent {
     this.menuctrl.toggle();
     this.navCtrl.navigateRoot('home')
   }
-  openpage(p) {
+  openarraypages(p) {
     console.log('page===', p.title);
 
     this.activepage = p.title
     this.menuctrl.close();
     this.show = false;
     this.show1 = false;
+  }
+  openpage(type) {
+    if (type == 'Home') {
+      this.activepage = type
+      this.url = '/home'
+      // this.router.navigateByUrl('/home')
+    }
+    if (type == 'About') {
+      this.activepage = type
+      this.url = '/about'
+      // this.router.navigate(['about'])
+    }
+    if (type == 'SuretyBonds') {
+      this.activepage = type
+      this.url = '/suretybonds'
+      // this.router.navigate(['suretybonds'])
+    }
+    if (type == 'InsuranceBackedGuarantees') {
+      this.activepage = type
+      this.url = '/insurancebackedgurantee'
+      //   this.router.navigate(['insurancebackedgurantee'])
+    }
+    if (type == 'StructuralWarranties') {
+      this.activepage = type
+      this.url = '/structuralwarranties'
+      // this.router.navigate(['structuralwarranties'])
+    }
+    this.menuctrl.close();
   }
   ionViewWillEnter() {
     console.log('dasdsadasdsadsadsa=====')

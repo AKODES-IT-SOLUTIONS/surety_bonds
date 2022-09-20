@@ -10,87 +10,113 @@
             <img src="assets/imgs/logo.svg">
           </div>
         </div>
+        <ion-item routerDirection="root" lines="none" detail="false" [routerLink]="[url]">
+          <img class="sidemenu-icons" src="/assets/imgs/icons/home.svg">
+          <ion-label class="title" (click)="openpage('Home')" [class.ativeindex]="'Home'==activepage">Home
+          </ion-label>
+
+        </ion-item>
+        <ion-item routerDirection="root" lines="none" detail="false" [routerLink]="[url]">
+          <img class="sidemenu-icons" src="/assets/imgs/icons/about.svg">
+          <ion-label class="title" (click)="openpage('About')" [class.ativeindex]="'About'==activepage">About
+          </ion-label>
+        </ion-item>
+        <ion-item routerDirection="root" lines="none" detail="false" [routerLink]="[url]">
+          <img class="sidemenu-icons" src="/assets/imgs/icons/noun-contract.svg">
+          <ion-label class="title" (click)="openpage('SuretyBonds')" [class.ativeindex]="'SuretyBonds'==activepage">
+            Surety
+            Bonds
+          </ion-label>
+          <div *ngIf="!show" style="margin-top: 4%;">
+            <ion-icon class="iconcls" name="caret-down-outline" (click)="showhide()">
+            </ion-icon>
+          </div>
+          <div *ngIf="show" style="margin-top: 4%;">
+            <ion-icon class="iconcls" name="caret-up-outline" (click)="showhide()">
+            </ion-icon>
+          </div>
+        </ion-item>
+        <!-- ///Surety bonds dropdownlist -->
+        <div class="extra" *ngIf="show==true">
+          <div auto-hide="false" *ngFor="let p of appsubPages; let i = index" (click)="openarraypages(p)"
+            style="margin-left:10px;">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <img class="sidemenu-icons" src="{{p.img}}">
+
+              <div style="display: flex;width: 100%;">
+                <ion-label class="title1" [class.ativeindex]="p.title==activepage">{{ p.title }}</ion-label>
+                <div *ngIf="!show" style="margin-top: 4%;" (click)="showhide()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-down-outline"></ion-icon>
+                </div>
+                <div *ngIf="show" style="margin-top: 4%;" (click)="showhide()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-up-outline"></ion-icon>
+                </div>
+
+              </div>
+
+            </ion-item>
+          </div>
+        </div>
+        <!-- ///end here Surety bonds dropdownlist -->
+
+        <ion-item routerDirection="root" lines="none" detail="false" [routerLink]="[url]">
+          <img class="sidemenu-icons" src="/assets/imgs/icons/insurance.svg">
+          <ion-label class="title" (click)="openpage('InsuranceBackedGuarantees')"
+            [class.ativeindex]="'InsuranceBackedGuarantees'==activepage">Insurance Backed Guarantees
+          </ion-label>
+        </ion-item>
+
+        <ion-item routerDirection="root" lines="none" detail="false" [routerLink]="[url]">
+          <img class="sidemenu-icons" src="/assets/imgs/icons/noun-certified.svg">
+          <ion-label class="title" (click)="openpage('StructuralWarranties')"
+            [class.ativeindex]="'StructuralWarranties'==activepage">Structural Warranties
+          </ion-label>
+          <div *ngIf="!show1" style="margin-top: 4%;">
+            <ion-icon class="iconcls" name="caret-down-outline" (click)="showhide1()">
+            </ion-icon>
+          </div>
+          <div *ngIf="show1" style="margin-top: 4%;">
+            <ion-icon class="iconcls" name="caret-up-outline" (click)="showhide1()">
+            </ion-icon>
+          </div>
+        </ion-item>
+
+        <!-- strutrula watanties -->
+        <div class="extra1" *ngIf="show1==true">
+          <div auto-hide="false" *ngFor="let p of appsubPages1; let i = index" (click)="openarraypages(p)">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false">
+              <img class="sidemenu-icons" src="{{p.img}}">
+
+              <div style="display: flex;width: 100%;">
+                <ion-label class="title1" [class.ativeindex]="p.title==activepage">{{ p.title }}</ion-label>
+                <div *ngIf="!show1" style="margin-top: 4%;" (click)="showhide1()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-down-outline">
+                  </ion-icon>
+                </div>
+                <div *ngIf="show1" style="margin-top: 4%;" (click)="showhide1()">
+                  <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-up-outline"></ion-icon>
+                </div>
+
+              </div>
+
+            </ion-item>
+          </div>
+        </div>
+        <!-- strutrula watanties end here -->
         <div auto-hide="false" *ngFor="let p of appPages; let i = index">
-          <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
-            routerLinkActive="selected">
+          <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false">
             <img class="sidemenu-icons" src="{{p.img}}">
             <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
             <div style="display: flex;width: 100%;">
-              <ion-label class="title" [class.ativeindex]="p.title==activepage" (click)="openpage(p)">{{ p.title }}
+              <ion-label class="title1" [class.ativeindex]="p.title==activepage" (click)="openarraypages(p)">{{ p.title
+                }}
               </ion-label>
-              <div *ngIf="!show" style="margin-top: 4%;">
-                <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-down-outline"
-                  (click)="showhide()"></ion-icon>
-              </div>
-              <div *ngIf="show" style="margin-top: 4%;">
-                <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-up-outline" (click)="showhide()">
-                </ion-icon>
-              </div>
-
-              <!-- strutrula watanties -->
-              <div *ngIf="!show1" style="margin-top: 4%;">
-                <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties' " name="caret-down-outline"
-                  (click)="showhide1()"></ion-icon>
-              </div>
-              <div *ngIf="show1" style="margin-top: 4%;">
-                <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-up-outline"
-                  (click)="showhide1()">
-                </ion-icon>
-              </div>
-              <!-- strutrula watanties -->
 
             </div>
 
           </ion-item>
         </div>
-
-        <div class="extra" *ngIf="show==true">
-          <div auto-hide="false" *ngFor="let p of appsubPages; let i = index" (click)="openpage(p)">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
-              routerLinkActive="selected">
-              <img class="sidemenu-icons" src="{{p.img}}">
-
-              <div style="display: flex;width: 100%;">
-                <ion-label class="title" [class.ativeindex]="p.title==activepage">{{ p.title }}</ion-label>
-                <div *ngIf="!show" style="margin-top: 4%;" (click)="showhide()">
-                  <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-down-outline"
-                    ></ion-icon>
-                </div>
-                <div *ngIf="show" style="margin-top: 4%;"  (click)="showhide()">
-                  <ion-icon class="iconcls" *ngIf="p.title=='Surety Bonds'" name="caret-up-outline"
-                   ></ion-icon>
-                </div>
-
-              </div>
-
-            </ion-item>
-          </div>
-        </div>
-        <!-- strutrula watanties -->
-        <div class="extra1" *ngIf="show1==true">
-          <div auto-hide="false" *ngFor="let p of appsubPages1; let i = index" (click)="openpage(p)">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
-              routerLinkActive="selected">
-              <img class="sidemenu-icons" src="{{p.img}}">
-
-              <div style="display: flex;width: 100%;">
-                <ion-label class="title" [class.ativeindex]="p.title==activepage">{{ p.title }}</ion-label>
-                <div *ngIf="!show1" style="margin-top: 4%;" (click)="showhide1()">
-                  <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-down-outline"
-                    ></ion-icon>
-                </div>
-                <div *ngIf="show1" style="margin-top: 4%;" (click)="showhide1()">
-                  <ion-icon class="iconcls" *ngIf="p.title=='Structural Warranties'" name="caret-up-outline"
-                    ></ion-icon>
-                </div>
-
-              </div>
-
-            </ion-item>
-          </div>
-        </div>
-        <!-- strutrula watanties -->
-
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

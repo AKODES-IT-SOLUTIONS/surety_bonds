@@ -1,9 +1,6 @@
 {
-  "name": "wolf",
+  "name": "lev",
   "integrations": {
-    "capacitor": {
-      "enabled": false
-    },
     "cordova": {}
   },
   "type": "angular"
