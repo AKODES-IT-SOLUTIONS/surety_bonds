@@ -9,7 +9,7 @@ describe('AdvancedpaymentbondsPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdvancedpaymentbondsPage ],
+      declarations: [AdvancedpaymentbondsPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
