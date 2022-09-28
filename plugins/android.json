@@ -16,9 +16,6 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.suretybonds.app"
     },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.suretybonds.app"
-    },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.suretybonds.app"
     },
@@ -35,6 +32,9 @@
       "PACKAGE_NAME": "com.suretybonds.app"
     },
     "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.suretybonds.app"
+    },
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.suretybonds.app"
     }
   },
